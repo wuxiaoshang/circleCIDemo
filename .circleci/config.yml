@@ -23,6 +23,9 @@ jobs:
     # CircleCI will report the results back to your VCS provider.
     steps:
       # Checkout the code as the first step.
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:7U0SRHWdWo5nHZUfwiVoXYjj0xPQdrrFPaWZ6hIyg6g"
       - checkout
       - restore_cache:
           keys: 
