@@ -19,6 +19,7 @@ jobs:
     branches:
       only:
         -master
+        - /rc-.*/
     # Then run your tests!
     # CircleCI will report the results back to your VCS provider.
     steps:
