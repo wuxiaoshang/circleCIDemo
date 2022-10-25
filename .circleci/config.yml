@@ -5,9 +5,6 @@ jobs:
   build:
     docker:
       - image: cimg/node:16
-    branches:
-        only:
-          -master
       # Then run your tests!
       # CircleCI will report the results back to your VCS provider.
     steps:
@@ -34,7 +31,10 @@ jobs:
 workflows:
   build_and_test:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              only: /server\/.*/
 
 
 # # Use the latest 2.1 version of CircleCI pipeline process engine.
